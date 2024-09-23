@@ -7,41 +7,80 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- Header Section -->
     <header>
         <h1>Sheyda Messali</h1>
         <p>Data Engineer | AWS, PySpark, Python</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section id="about">
+    <!-- About Section -->
+    <section id="about" class="fade-in">
         <h2>About Me</h2>
         <p>I am a Data Engineer with expertise in cloud-based data platforms, end-to-end data solutions...</p>
     </section>
 
-    <section id="experience">
+    <!-- Experience Section -->
+    <section id="experience" class="fade-in">
         <h2>Experience</h2>
-        <!-- Add experience details here -->
+        <div>
+            <h3>Data Engineer | Sedona Group, Geneva</h3>
+            <p>June 2024 – Present</p>
+            <p>Assisted the Real Estate Department of the State in migrating tables from Access to QlikView ETL...</p>
+        </div>
+        <!-- Add more job experiences here -->
     </section>
 
-    <section id="projects">
+    <!-- Projects Section -->
+    <section id="projects" class="fade-in">
         <h2>Projects</h2>
-        <!-- Add project details here -->
+        <div>
+            <h3>Cross-Sell Recommendation Tool for BNP Personal Finance</h3>
+            <p>Industrialized a cross-sell recommendation tool with machine learning models...</p>
+        </div>
+        <!-- Add more projects here -->
     </section>
 
-    <section id="skills">
+    <!-- Skills Section -->
+    <section id="skills" class="fade-in">
         <h2>Skills</h2>
-        <!-- Add skills here -->
+        <ul>
+            <li>Data Engineering: Data ingestion, data processing, data quality monitoring, data modeling</li>
+            <li>Cloud Platforms: AWS, Azure</li>
+            <li>Programming: Python, PySpark, SQL</li>
+        </ul>
     </section>
 
-    <section id="contact">
+    <!-- Contact Section -->
+    <section id="contact" class="fade-in">
         <h2>Contact</h2>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/sheyda-iraninasab/">Sheyda Messali</a></p>
         <p>Email: <a href="mailto:sheyda.messali@gmail.com">sheyda.messali@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/sheyda-iraninasab/">Sheyda Messali</a></p>
     </section>
 
+    <!-- Back-to-Top Button -->
+    <button id="back-to-top" title="Back to top">&uarr;</button>
+
+    <!-- Dark Mode Toggle -->
+    <label class="switch">
+        <input type="checkbox" id="theme-toggle">
+        <span class="slider round"></span>
+    </label>
+
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Sheyda Messali</p>
+        <p>&copy; Sheyda Messali</p>
     </footer>
     
+    <!-- JavaScript File -->
     <script src="js/scripts.js"></script>
 </body>
 </html>
