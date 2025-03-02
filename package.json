@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "dependencies": {
+    "marked": "^9.0.0",
+    "front-matter": "^4.0.2"
+  }
+} 

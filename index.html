@@ -54,13 +54,28 @@
     <!-- Blog Section -->
     <section id="blog" class="section">
         <h2>Latest Posts</h2>
-        <div class="posts-grid">
+        <div id="posts-grid" class="posts-grid">
+            <!-- Static blog post as fallback -->
             <article class="post-card">
-                <h3>Getting Started with AWS Lambda</h3>
-                <p>Learn how to build serverless applications with AWS Lambda...</p>
-                <a href="#" class="read-more">Read More</a>
+                <div class="post-thumbnail">
+                    <img src="blog-posts/docker-deployment-on-aws/images/thumbnail.jpg" alt="Docker AWS Deployment">
+                </div>
+                <div class="post-content">
+                    <div class="post-meta">
+                        <span class="post-date">March 20, 2024</span>
+                        <span class="post-read-time">10 min read</span>
+                    </div>
+                    <h3>Deploying Docker Web App on AWS Cloud</h3>
+                    <p>A comprehensive guide to deploying containerized applications on AWS infrastructure.</p>
+                    <div class="post-tags">
+                        <span class="tag">Docker</span>
+                        <span class="tag">AWS</span>
+                        <span class="tag">Web Development</span>
+                        <span class="tag">Cloud</span>
+                    </div>
+                    <a href="blog-posts/docker-deployment-on-aws/index.html" class="read-more">Read More →</a>
+                </div>
             </article>
-            <!-- Add more post cards as needed -->
         </div>
     </section>
 
@@ -82,5 +97,7 @@
         </div>
     </section>
 
+    <!-- Scripts -->
+    <script src="js/blog-loader.js" type="module"></script>
 </body>
 </html> 
