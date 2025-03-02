@@ -1,7 +1,7 @@
 .blog-post {
     max-width: 800px;
-    margin: 80px auto;
-    padding: 2rem;
+    margin: 0 auto;
+    padding: 3rem;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     backdrop-filter: blur(10px);
@@ -9,16 +9,16 @@
 
 .blog-post h1 {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .blog-post h2 {
     font-size: 1.8rem;
-    margin: 2rem 0 1rem;
+    margin: 4rem 0 2rem;
 }
 
 .blog-post p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     line-height: 1.8;
 }
 
@@ -40,4 +40,120 @@
     max-width: 100%;
     border-radius: 8px;
     margin: 1.5rem 0;
+}
+
+.blog-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.post-header {
+    margin-bottom: 4rem;
+    text-align: center;
+}   
+
+.post-meta {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.post-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.tag {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.post-footer {
+    margin-top: 6rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.author-bio {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.author-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-info h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.author-info p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.share-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.share-link {
+    color: white;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.share-link:hover {
+    transform: translateY(-3px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .blog-container {
+        margin-top: 100px;
+        padding: 0 1rem;
+    }
+    
+    .blog-post {
+        padding: 2rem;
+    }
+    
+    .post-header {
+        margin-bottom: 3rem;
+    }
+    
+    .post-content h2 {
+        margin: 3rem 0 1.5rem;
+    }
+    
+    .author-bio {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .post-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
 } 

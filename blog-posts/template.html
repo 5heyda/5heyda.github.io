@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}} | Cloud & Clay</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/blog-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="/blog-posts/blog-styles.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -22,12 +21,41 @@
         </div>
     </nav>
 
-    <article class="blog-post">
-        <div class="post-content">
-            {{content}}
-        </div>
-    </article>
+    <div class="blog-container">
+        <article class="blog-post">
+            <header class="post-header">
+                <h1>{{title}}</h1>
+                <div class="post-meta">
+                    <span class="post-date">{{date}}</span>
+                    <span class="post-read-time">{{readTime}}</span>
+                </div>
+                <div class="post-tags">
+                    {{#each tags}}
+                        <span class="tag">{{this}}</span>
+                    {{/each}}
+                </div>
+            </header>
 
-    <script type="module" src="/js/blog-post.js"></script>
+            <div class="post-content">
+                {{content}}
+            </div>
+        </article>
+    </div>
+
+    <script>
+        async function loadMarkdownContent() {
+            try {
+                const response = await fetch('post.md');
+                const markdown = await response.text();
+                const converter = new showdown.Converter();
+                const html = converter.makeHtml(markdown);
+                document.getElementById('content').innerHTML = html;
+            } catch (error) {
+                console.error('Error loading markdown:', error);
+            }
+        }
+        loadMarkdownContent();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
 </body>
 </html> 

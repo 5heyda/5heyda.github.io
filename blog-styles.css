@@ -1,0 +1,240 @@
+/* Base Styles */
+body {
+    font-family: 'Bookman', 'Bookman Old Style', serif;
+    margin: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);  /* Static gradient */
+    color: white;
+    line-height: 1.6;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+/* Container Styles */
+.container, .blog-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Hero Section */
+.hero-content {
+    text-align: center;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+/* Blog Post Styles */
+.blog-post {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    padding: 3rem;
+}
+
+.post-header {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.post-meta {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.post-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.tag {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* Blog Content Styles */
+.blog-post h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.blog-post h2 {
+    font-size: 1.8rem;
+    margin: 4rem 0 2rem;
+}
+
+.blog-post p {
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.blog-post code {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+}
+
+.blog-post pre {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 2rem 0;
+}
+
+.blog-post img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 2.5rem 0;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.social-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+}
+
+/* Author Bio */
+.post-footer {
+    margin-top: 6rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.author-bio {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.author-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-info h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.author-info p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .blog-container {
+        padding: 1rem;
+    }
+    
+    .blog-post {
+        padding: 2rem;
+    }
+    
+    .post-header {
+        margin-bottom: 3rem;
+    }
+    
+    .author-bio {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .post-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+} 
